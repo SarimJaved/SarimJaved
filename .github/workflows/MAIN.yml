@@ -2,8 +2,8 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # Adjust the cron expression as needed
-  workflow_dispatch:
+    - cron: "0 */6 * * *"  # Runs every 6 hours
+  workflow_dispatch:       # Allows manual triggering of the workflow
 
 jobs:
   build:
@@ -15,20 +15,23 @@ jobs:
       - name: Create output directory
         run: mkdir -p dist
 
-      - uses: Platane/snk@master
+      - name: Generate Snake GIF and SVG
+        uses: Platane/snk@master
         id: snake-gif
         with:
           github_user_name: SarimJaved
           gif_out_path: dist/github-contribution-grid-snake.gif
           svg_out_path: dist/github-contribution-grid-snake.svg
 
+      - name: Check git status (for debugging)
+        run: git status
+
       - name: Push changes (optional)
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
-          # Consider removing force push if possible
-          force: false
+          force: false  # Consider removing force if not needed
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
