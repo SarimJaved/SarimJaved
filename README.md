@@ -18,7 +18,7 @@
     - 💬 Ask me about: <strong>AI, Python Programming 🐍, and Data Analysis 📊.</strong>
 </p>
 <p style="font-family: 'Arial', sans-serif; color: #34495E; font-size: 18px;">
-    - 📫 How to reach me: <strong><a href="mailto:sarim825@gmail.com">sarim825@gmail.com</a></strong>
+    - 📫 How to reach me: <strong><a href="mailto:sarimr825@gmail.com">sarimr825@gmail.com</a></strong>
 </p>
 <p style="font-family: 'Arial', sans-serif; color: #34495E; font-size: 18px;">
     - ⚡ Fun fact: <strong>I love solving puzzles and playing chess ♟️!</strong>
